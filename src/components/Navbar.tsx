@@ -12,15 +12,24 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-background/90 backdrop-blur-md border-b border-border z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+    <nav className="fixed top-0 w-full z-50">
+      <div className="container mx-auto px-4 pt-4">
+        <div className="bg-background/90 backdrop-blur-md border border-border rounded-2xl shadow-card px-6 py-4">
+          <div className="flex items-center justify-between h-12">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">R</span>
+          <Link to="/" className="flex items-center">
+            <div className="flex items-center space-x-1">
+              {/* Leaf icons */}
+              <div className="flex items-center">
+                <div className="w-3 h-3 border border-foreground rounded-full"></div>
+                <div className="w-3 h-3 bg-brand-primary rounded-full ml-1"></div>
+              </div>
+              {/* Text */}
+              <span className="font-bold text-xl">
+                <span className="text-brand-primary">Renti</span>
+                <span className="text-foreground">goo</span>
+              </span>
             </div>
-            <span className="font-bold text-xl text-foreground">Rentigoo</span>
           </Link>
 
           {/* Center Navigation */}
@@ -51,6 +60,7 @@ const Navbar = () => {
             >
               Get Started
             </Button>
+          </div>
           </div>
         </div>
       </div>
